@@ -1,12 +1,10 @@
 package ru.kermas.smarthouse.modbus.master;
 
 import java.net.*;
-import java.io.*;
 import net.wimpi.modbus.*;
 import net.wimpi.modbus.msg.*;
 import net.wimpi.modbus.io.*;
 import net.wimpi.modbus.net.*;
-import net.wimpi.modbus.util.*;
 
 public class Master {
 
