@@ -1,8 +1,5 @@
 package ru.kermas.smarthouse.modbus.master;
 
-import java.net.*;
-import java.io.*;
-
 import com.serotonin.modbus4j.ModbusFactory;
 import com.serotonin.modbus4j.ModbusMaster;
 import com.serotonin.modbus4j.code.DataType;
