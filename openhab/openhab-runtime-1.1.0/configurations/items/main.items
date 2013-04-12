@@ -1,0 +1,11 @@
+Group All
+Group gFF 		(All)
+Group FF_Corridor 	"Corridor" 		<corridor> 	(gFF)
+
+/* active groups */
+Group:Switch:OR(ON, OFF) 		Lights 		"All Lights [(%d)]"
+
+/* Lights */
+Switch Light_FF_Corridor_Ceiling 	"Corridor" 		(FF_Corridor, Lights) {modbus="slave1:2"}
+Switch MySwitch "My Modbus Switch" (All, gFF) {modbus="slave1:5"}
+Contact Contact1 "Contact1" (All, gFF)   {modbus="slave2:2"}

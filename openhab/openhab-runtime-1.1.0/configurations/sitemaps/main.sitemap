@@ -1,0 +1,7 @@
+sitemap main label="Main Menu"
+{
+	Frame {
+		Group item=gFF label="First Floor" icon="firstfloor"
+	
+	}
+}
