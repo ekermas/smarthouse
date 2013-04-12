@@ -16,6 +16,9 @@ Group:Switch:OR(ON, OFF)			Valves		"All Valves [(%d)]"
 Group:Switch:OR(ON, OFF)			Fans		"All Fans [(%d)]"
 Group:Contact:OR(OPEN, CLOSED)		Doors		"Door Sensors [(%d)]"	<contact>	(All)
 
+/* NTP binding demo item */
+DateTime		Date			"DateTime [%1$tA, %1$td.%1$tm.%1$tY]"	<calendar>	{ntp="Europe/Moscow:en_EN"}
+
 /* Lights */
 Switch Light_Kitchen_Main		"Kitchen main"		(Kitchen, Lights)	{modbus="slave1:0"}
 Switch Light_Kitchen_Sub		"Kitchen sub"		(Kitchen, Lights)	{modbus="slave1:1"}

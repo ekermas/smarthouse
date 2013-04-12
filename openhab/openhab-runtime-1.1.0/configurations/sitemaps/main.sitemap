@@ -10,6 +10,10 @@ sitemap main label="Main Menu"
 		Group item=Corridor
 		Group item=BathroomSmall
 	}
+	
+	Frame label="Date" {
+		Text item=Date
+	}
 
 	Frame label="Common controls" {
 		Group item=Doors
