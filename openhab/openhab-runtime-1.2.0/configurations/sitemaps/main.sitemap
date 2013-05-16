@@ -1,0 +1,23 @@
+sitemap main label="Main Menu"
+{
+	Frame label="Rooms" {
+		Group item=Kitchen
+		Group item=Balcony
+		Group item=Livingroom
+		Group item=Bedroom
+		Group item=BathroomBig
+		Group item=Childroom
+		Group item=Corridor
+		Group item=BathroomSmall
+	}
+	
+	Frame label="Date" {
+		Text item=Date
+	}
+
+	Frame label="Common controls" {
+		Group item=Doors
+		Switch item=Lights mappings=[OFF="All Off"]
+		Switch item=Sockets mappings=[OFF="All Off"]
+	}
+}

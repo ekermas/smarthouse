@@ -1,0 +1,13 @@
+import org.openhab.core.library.types.*
+import org.openhab.core.persistence.*
+import org.openhab.model.script.actions.*
+
+var Number counter = 1
+var Timer timer = null
+
+rule Startup
+when 
+	System started
+then
+	say("Welcome at openHab!")
+end

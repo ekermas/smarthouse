@@ -1,0 +1,33 @@
+Group All
+Group Kitchen			"Kitchen"			<kitchen>	(All)
+Group Balcony			"Balcony"			<terrace>	(All)
+Group Livingroom		"Livingroom"		<sofa>		(All)
+Group Bedroom			"Bedroom" 			<bedroom>	(All)
+Group BathroomBig		"Bathroom big"		<bath>		(All)
+Group Childroom			"Childroom"			<child1>	(All)
+Group Corridor			"Corridor"			<corridor>	(All)
+Group BathroomSmall		"Bathroom small"	<bath>		(All)
+Group Common			"Common"			<frontdoor-open>		(All)
+
+/* active groups */
+Group:Switch:OR(ON, OFF)			Lights		"All Lights [(%d)]"
+Group:Switch:OR(ON, OFF)			Sockets		"All Sockets [(%d)]"
+Group:Switch:OR(ON, OFF)			Valves		"All Valves [(%d)]"
+Group:Switch:OR(ON, OFF)			Fans		"All Fans [(%d)]"
+Group:Contact:OR(OPEN, CLOSED)		Doors		"Door Sensors [(%d)]"	<contact>	(All)
+
+/* NTP binding demo item */
+DateTime		Date			"DateTime [%1$tA, %1$td.%1$tm.%1$tY]"	<calendar>	{ntp="Europe/Moscow:en_EN"}
+
+/* Lights */
+Switch Light_Kitchen_Main		"Kitchen main"		(Kitchen, Lights)	{modbus="slave1:0"}
+Switch Light_Kitchen_Sub		"Kitchen sub"		(Kitchen, Lights)	{modbus="slave1:1"}
+Switch Fan_Kitchen				"Kitchen fan"		(Kitchen, Fans)		{modbus="slave1:2"}
+Switch Light_Balcony_Main		"Balcony"			(Balcony, Lights)	{modbus="slave1:3"}
+
+/* Sockets */
+Switch Socket_12_G1	"Socket kitchen and balcony"	(Kitchen, Balcony, Sockets)		{modbus="slave1:4"}
+Switch Socket_34_G1	"Socket livingroom and bedroom"	(Livingroom, Bedroom, Sockets)	{modbus="slave1:5"}
+
+/* Contacts */
+Contact MainDoorSensor	"Main door [MAP(en.map):%s]"	(Common, Doors)	{modbus="slave2:0"}
