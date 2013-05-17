@@ -6,7 +6,7 @@ import com.serotonin.modbus4j.code.DataType;
 import com.serotonin.modbus4j.code.RegisterRange;
 import com.serotonin.modbus4j.ip.IpParameters;
 
-public class Master2 {
+public class Master {
 
 	public static void main(String[] args) {
 		try {
